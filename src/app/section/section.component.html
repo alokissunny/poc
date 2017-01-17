@@ -1,0 +1,19 @@
+  <div>
+  <p>
+  section starts
+  </p>
+  <ul >
+    <li *ngFor="let node of _dataModel.getChilds()" >
+      <app-step *ngIf = "node != null && node.type =='STEP'" >
+      </app-step>
+      <app-section *ngIf = "node != null &&node.type =='SECTION'" [dataModel]="node"  >
+      </app-section>
+    </li>
+    </ul>
+
+    <p>
+  section ends
+  </p>
+  </div>
+
+
